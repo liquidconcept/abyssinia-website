@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="<%= stylesheet_path 'application' %>" media="screen">
+    <script src="<%= javascript_path 'application' %>"></script>
+  </head>
+  <body>
+    <section id="main">
+      <header>
+        <div id="header">
+          <h1>Abyssinia</h1>
+        </div>
+        <div id="naviguation">
+          <nav>
+            <ul>
+              <li>Accueil</li>
+              <li>Menu</li>
+              <li>Traiteur</li>
+              <li>Promotion</li>
+              <li>Bonnes critiques</li>
+              <li>Informations</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="both"></div>
+      </header>
+      <section id="sidebar">
+        <%= content_for(item, :sidebar) %>
+      </section>
+      <section id="content">
+        <%= yield %>
+      </section>
+      <footer>
+        <%= content_for(item, :footer) %>
+        <p>développé par Liquid Concept</p>
+      </footer>
+    </section>
+  </body>
+</html>

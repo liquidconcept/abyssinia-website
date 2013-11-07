@@ -1,0 +1,140 @@
+/***********************/
+/******* IMPORT ********/
+/***********************/
+@import "compass/reset";
+@import "compass/typography/text/replacement";  /*FEATURES FOR THE LOGO*/
+@import "compass/typography/lists/horizontal-list"; /* FEATURES FOR THE NAVBAR */
+@import "jquery-ui";
+
+$list-space: 5px;
+
+/*******************/
+/****** COLOR ******/
+/*******************/
+$beige: #f0e3b0;
+$brown: #6e3113;
+$black: #2a0f04;
+
+body {
+  background: url(background.jpg) 191px 0px repeat-y;
+  color: $black;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.both {
+  clear: both;
+}
+
+.important {
+  font-weight: bold;
+}
+
+.warning {
+  font-size: 0.9em;
+  background: $beige;
+  color: $brown;
+  font-weight: bold;
+}
+
+.image_right {
+  float: right;
+  margin-top: 50px;
+}
+
+section#main {
+  background: url(panier.png) 153px bottom no-repeat;
+}
+
+section#content {
+  width: 500px;
+  margin: 0 auto;
+  padding-left: 45px;
+  margin-bottom: 20px;
+
+  table {
+
+    td, th {
+      border: #decd87 1px solid;
+    }
+
+    th {
+      text-align: center;
+      font-weight: bold;
+      width: 135px;
+      height: 25px;
+    }
+  }
+}
+
+#horaire {
+  float: left;
+  width: 240px;
+}
+
+h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $brown;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+header {
+  width: 975px;
+  margin: 0 auto;
+  height: 265px;
+
+  h1 {
+    position: absolute;
+    left: 161px;
+    @include replace-text-with-dimensions('logo.png', 50%, 50%, true);
+  }
+
+  #header {
+    height: 155px;
+    margin-left: 202px;
+    background: url(header.jpg) no-repeat;
+  }
+
+  #naviguation {
+    background: url(menu.png) no-repeat;
+    height: 105px;
+
+    nav {
+      margin-left: 82px;
+      padding-top: 22px;
+
+      ul {
+      color: white;
+      @include horizontal-list($list-space);
+
+        li {
+          font-size: 0.9em;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+section#sidebar {
+  float: right;
+  width: 175px;
+  margin-right: 163px;
+}
+
+footer {
+  width: 560px;
+  margin: 0 auto;
+  border-top: 2px solid $brown;
+  font-size: 10px;
+  text-align: center;
+
+  p {
+    margin: 2px 0px 0px 0px;
+  }
+}
