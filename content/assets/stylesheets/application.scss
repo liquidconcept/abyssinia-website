@@ -42,7 +42,6 @@ p {
 
 .image_right {
   float: right;
-  margin-top: 50px;
 }
 
 section#main {
@@ -70,9 +69,22 @@ section#content {
   }
 }
 
-#horaire {
+#horaire, #anniversaire {
   float: left;
   width: 240px;
+}
+
+.image_right #horaire {
+    margin-top: 50px;
+}
+
+.canape {
+    padding: 20px 0px 15px 0px;
+}
+
+.champagne, .piece, .anniversaire_2 {
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 h2 {
