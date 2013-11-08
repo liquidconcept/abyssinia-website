@@ -74,6 +74,12 @@ section#content {
   width: 240px;
 }
 
+#journaux {
+  float: left;
+  width: 298px;
+  padding-right: 26px;
+}
+
 .image_right #horaire {
     margin-top: 50px;
 }
@@ -82,7 +88,7 @@ section#content {
     padding: 20px 0px 15px 0px;
 }
 
-.champagne, .piece, .anniversaire_2, .cuisine_3, .cuisine_4, .plats, .piece_3 ,.anniversaire_2, .repas_4  {
+.image_sidebar  {
   margin-top: 20px;
   margin-right: 20px;
 }
@@ -99,7 +105,7 @@ section#content {
   margin-left: 20%;
 }
 
-.map {
+.map, .maryam, .kifto {
   margin-left: 8%;
 }
 
@@ -164,8 +170,8 @@ section#sidebar {
 
   p {
     font-size: 0.9em;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    padding-top: 5px;
+    margin: 0px;
   }
 }
 
