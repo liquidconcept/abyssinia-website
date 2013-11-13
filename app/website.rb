@@ -10,17 +10,18 @@ module Application
     set :public_folder, File.expand_path('../../public', __FILE__)
 
     # Contact form
-    post '/index' do
+    post '/contact' do
       template = ERB.new(File.read(File.expand_path('../templates/contact.text.erb', __FILE__), :encoding => 'UTF-8'))
 
       Pony.mail(
-        :from     => params[:message_request][:mail],
+        :from     => params[:message_request][:email],
         :to       => COMMAND_EMAIL_TO,
         :charset  => 'utf-8',
-        :subject  => params[:message_request][:subject],
+        :subject  => COMMAND_SUBJECT,
         :body     => template.result(binding)
       )
-      redirect "/"
+
+      redirect "/contact.html"
     end
   end
 end

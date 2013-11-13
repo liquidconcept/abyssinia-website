@@ -1,0 +1,29 @@
+<% content_for :sidebar do %>
+
+<% end %>
+
+<h2>Réservez ou Demandez-nous des informations</h2>
+
+<form method="post" action="/contact">
+  <p>Civilité</p>
+  <select name="message_request[gender]">
+      <option value="Monsieur">Monsieur</option>
+      <option value="Madame">Madame</option>
+  </select>
+  <p>Prénom (requis)</p>
+  <input name="message_request[firstname]" size="20" type="text" value="" />
+  <p>Nom (requis)</p>
+  <input name="message_request[name]" size="20" type="text" value="" />
+  <p>Mail (requis)</p>
+  <input name="message_request[email]" size="20" type="text" value="" />
+  <p>Téléphone</p>
+  <input name="message_request[phone]" size="20" type="text" value="" />
+  <p>Entreprise</p>
+  <input name="message_request[company]" size="20" type="text" value="" />
+  <a href="http://google.com"><p>Fournir plus de renseignements</p></a>
+  <p>Message (requis)</p>
+  <textarea name="message_request[message]"></textarea>
+  <br />
+  <input name="commit" type="submit" value="Envoyer">
+</form>
+<br /><br /><br /><br /><br /><br />

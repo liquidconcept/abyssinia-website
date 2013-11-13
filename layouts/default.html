@@ -15,15 +15,17 @@
         <div id="naviguation">
           <nav>
             <ul>
-              <li>Accueil</li>
-              <li>Menu</li>
-              <li>Traiteur</li>
-              <li>Promotion</li>
-              <li>Bonnes critiques</li>
-              <li>Informations</li>
-              <li>Contact</li>
+              <li><a href="/">Accueil</a></li>
+              <li><a href="/menu.html">Menu</a></li>
+              <li><a href="/traiteur.html">Traiteur</a></li>
+              <li><a href="/promotion.html">Promotion</a></li>
+              <li><a href="/bonnes_critiques.html">Bonnes critiques</a></li>
+              <li><a href="/informations.html">Informations</a></li>
+              <li><a href="/contact.html">Contact</a></li>
             </ul>
           </nav>
+          <p><a href="">Cérémonie du café<a/></p>
+          <p><a href="">Apéritifs et digestifs</a></p>
         </div>
         <div class="both"></div>
       </header>
@@ -32,6 +34,7 @@
       </section>
       <section id="content">
         <%= yield %>
+        <div class="both"></div>
       </section>
       <footer>
         <%= content_for(item, :footer) %>

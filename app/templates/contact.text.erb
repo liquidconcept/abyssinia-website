@@ -1,9 +1,11 @@
 Contact
 _______
 
+Civilité : <%= params[:message_request][:gender] %>
 Nom et Prénom : <%= params[:message_request][:name] %> <%= params[:message_request][:firstname] %>
-Email : <%= params[:message_request][:mail] %>
-Madame/Monsieur : <%= params[:message_request][:genre] %>
+Email : <%= params[:message_request][:email] %>
+Téléphone : <%= params[:message_request][:phone] %>
+Entreprise : <%= params[:message_request][:company] %>
 
----------- MESSAGE ------------
-<%= params[:message_request][:comment] %>
+--------------------------------------
+<%= params[:message_request][:message] %>

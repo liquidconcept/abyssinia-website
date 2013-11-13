@@ -51,7 +51,7 @@ section#main {
 section#content {
   width: 500px;
   margin: 0 auto;
-  padding-left: 45px;
+  padding-left: 70px;
   margin-bottom: 20px;
 
   table {
@@ -74,6 +74,17 @@ section#content {
   width: 240px;
 }
 
+.plats_list {
+  float: left;
+  width: 234px;
+  clear: left;
+}
+
+.plats_list_2 {
+  float: left;
+  width: 200px;
+}
+
 #journaux {
   float: left;
   width: 298px;
@@ -90,7 +101,7 @@ section#content {
 
 .image_sidebar  {
   margin-top: 20px;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .batimment_2 {
@@ -125,8 +136,30 @@ h2 {
   font-weight: bold;
 }
 
+form {
+
+  input, select, textarea, button {
+    background: #eed;
+  }
+
+  input {
+    font-weight: bold;
+  }
+
+  textarea {
+    width: 365px;
+    height: 195px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 header {
-  width: 975px;
+  width: 959px;
   margin: 0 auto;
   height: 265px;
 
@@ -157,8 +190,18 @@ header {
         li {
           font-size: 0.9em;
           font-weight: bold;
+
+          a, a:hover, a:visited {
+            color: white;
+            text-decoration: none;
+          }
         }
       }
+    }
+
+    p:first-child {
+      margin-left: 215px;
+      display: inline;
     }
   }
 }
