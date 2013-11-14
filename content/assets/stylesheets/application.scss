@@ -29,6 +29,10 @@ p {
   clear: both;
 }
 
+.clear {
+  clear: left;
+}
+
 .important {
   font-weight: bold;
 }
@@ -72,6 +76,12 @@ section#content {
 #horaire, #anniversaire {
   float: left;
   width: 240px;
+}
+
+.plats_list_small {
+  float: left;
+  width: 187px;
+  clear: left;
 }
 
 .plats_list {
@@ -159,7 +169,7 @@ form {
 }
 
 header {
-  width: 959px;
+  width: 975px;
   margin: 0 auto;
   height: 265px;
 
@@ -199,11 +209,49 @@ header {
       }
     }
 
-    p:first-child {
-      margin-left: 215px;
-      display: inline;
+    #sub_nav {
+      margin-left: 225px;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #982526;
+
+      p {
+        padding-right: 10px;
+        font-size: 12px;
+        font-family: helvetica;
+        display: inline;
+      }
+
+      a {
+        text-decoration: none;
+        color: #982526;
+      }
     }
   }
+}
+
+#cafe {
+
+
+  p {
+    text-align: center;
+  }
+}
+
+.cafe, .cafe_2, .cafe_3 {
+  margin: auto;
+}
+
+.cafe {
+  margin-left: 70px;
+}
+
+.cafe_2 {
+  width: 75%;
+}
+
+.cafe_3 {
+  width: 50%;
 }
 
 section#sidebar {

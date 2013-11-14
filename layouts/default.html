@@ -24,8 +24,9 @@
               <li><a href="/contact.html">Contact</a></li>
             </ul>
           </nav>
-          <p><a href="">Cérémonie du café<a/></p>
-          <p><a href="">Apéritifs et digestifs</a></p>
+          <div id="sub_nav">
+            <%= content_for(item, :sub_nav) %>
+          </div>
         </div>
         <div class="both"></div>
       </header>
