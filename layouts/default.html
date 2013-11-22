@@ -5,9 +5,20 @@
     <title></title>
     <link rel="stylesheet" href="<%= stylesheet_path 'application' %>" media="screen">
     <script src="<%= javascript_path 'application' %>"></script>
+    <!--[if IE]>
+            <script type="text/javascript">
+                document.createElement("header");
+                document.createElement("footer");
+                document.createElement("nav");
+                document.createElement("article");
+                document.createElement("section");
+                document.createElement("audio");
+                document.createElement("video");
+            </script>
+    <![endif]-->
   </head>
   <body>
-    <section id="main">
+    <div id="main">
       <header>
         <div id="header">
           <h1>Abyssinia</h1>
@@ -30,17 +41,17 @@
         </div>
         <div class="both"></div>
       </header>
-      <section id="sidebar">
+      <div id="sidebar">
         <%= content_for(item, :sidebar) %>
-      </section>
-      <section id="content">
+      </div>
+      <div id="content">
         <%= yield %>
         <div class="both"></div>
-      </section>
+      </div>
       <footer>
         <%= content_for(item, :footer) %>
         <p>développé par Liquid Concept</p>
       </footer>
-    </section>
+    </div>
   </body>
 </html>

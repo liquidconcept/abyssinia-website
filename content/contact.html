@@ -1,5 +1,9 @@
 <% content_for :sidebar do %>
-
+  <h2>Contact</h2>
+  <p>Café restaurant Abyssinia<br />Rue du Valentin 14<br />1004 Lausanne</p>
+  <p>Tél : 021 311 49 07<br />Fax : 021 311 44 46</p>
+  <br />
+  <a href="mailto:info@abyssinia.ch">info@abyssinia.ch</a>
 <% end %>
 
 <h2>Réservez ou Demandez-nous des informations</h2>
@@ -11,18 +15,17 @@
       <option value="Madame">Madame</option>
   </select>
   <p>Prénom (requis)</p>
-  <input name="message_request[firstname]" size="20" type="text" value="" />
+  <input name="message_request[firstname]" size="20" type="text" value="" required />
   <p>Nom (requis)</p>
-  <input name="message_request[name]" size="20" type="text" value="" />
+  <input name="message_request[name]" size="20" type="text" value="" required />
   <p>Mail (requis)</p>
-  <input name="message_request[email]" size="20" type="text" value="" />
+  <input name="message_request[email]" size="20" type="text" value="" required />
   <p>Téléphone</p>
   <input name="message_request[phone]" size="20" type="text" value="" />
   <p>Entreprise</p>
   <input name="message_request[company]" size="20" type="text" value="" />
-  <a href="http://google.com"><p>Fournir plus de renseignements</p></a>
   <p>Message (requis)</p>
-  <textarea name="message_request[message]"></textarea>
+  <textarea name="message_request[message]" required></textarea>
   <br />
   <input name="commit" type="submit" value="Envoyer">
 </form>

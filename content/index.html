@@ -1,9 +1,27 @@
 <% content_for :sidebar do %>
-
+  <a href="https://www.facebook.com/mersaeden"><img src="<%= asset_path "fb.gif" %>"></img></a>
+  <a href="https://www.facebook.com/mersaeden">Notre page Facebook</a>
+  <h2>Menu du jour</h2>
+  <p>Servi à midi du lundi au vendredi,
+  2 plats à choix, viande ou végétarien,
+  accompagnés d’un dessert,
+  au prix de <span class="important">CHF 16.-</span></p>
+  <br />
+  <img class="image_right image_sidebar" src="<%= asset_path "cuisine_5.jpg" %>"></img>
+  <div class="both"></div>
+  <p class="important center">Café restaurant Abyssinia</p>
+  <p class="center">Rue du Valentin 14</p>
+  <p class="center">1004 Lausanne</p>
+  <br />
+  <p class="center">Tél: 021 311 49 07</p>
+  <h2>Tourisme</h2>
+  <p>Pour organiser votre voyage en Ethiopie, consultez<br /><a href="http://www.Gebtours.com">Gebtours.com</a></p>
+  <br />
+  <img class="image_right image_sidebar" src="<%= asset_path "cafe_2.jpg" %>"></img>
 <% end %>
 
 <div class="warning">
-  <p>Réservations au 021 311 49 07 ou au 078 860 74 73. Par e-mail ou formulaire de contact : info@abyssinia.ch</p>
+  <p>Réservations au 021 311 49 07 ou au 078 860 74 73. Par e-mail ou <a href="/contact.html">formulaire de contact</a> : <a href="mailto:info@abyssinia.ch">info@abyssinia.ch</a></p>
 </div>
 
 <p>Livraison à domicile à partir de 6 personnes.</p>
@@ -25,5 +43,10 @@
   <p>80 places sont disponibles dans notre restaurant.</p>
   <p>Nous acceptons les cartes suivante : Visa, MasterCard, Maestro, Postcard.</p>
 </div>
-<div class="both"></div>
 <img src="<%= asset_path "batimment.jpg" %>"></img>
+<audio poster="poster.jpg" controls="controls" preload="none" loop>
+    <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
+    <source type="audio/mp3" src="/song/yekermo_sew_mp3.mp3" />
+    <!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
+    <source type="audio/webm" src="/song/yekermo_sew_webm.webm" />
+</audio>

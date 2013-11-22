@@ -15,14 +15,26 @@ $beige: #f0e3b0;
 $brown: #6e3113;
 $black: #2a0f04;
 
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section { display: block; }
+a > img { text-decoration: none; border: none; }
+
 body {
-  background: url(background.jpg) 191px 0px repeat-y;
   color: $black;
+}
+
+a {
+  color: #891813;
 }
 
 p {
   margin-top: 10px;
   margin-bottom: 15px;
+}
+
+hr {
+  border-top: 1px solid $brown;
+  border-bottom: 0px solid transparent;
+  width: 60%;
 }
 
 .both {
@@ -48,15 +60,19 @@ p {
   float: right;
 }
 
-section#main {
-  background: url(panier.png) 153px bottom no-repeat;
+#main {
+  height: 100%;
+  width: 980px;
+  margin: 0 auto;
+  background: url(background.jpg) 38px 0px repeat-y;
 }
 
-section#content {
-  width: 500px;
-  margin: 0 auto;
-  padding-left: 70px;
+#content {
+  width: 495px;
+  margin-left: 2px;
+  padding-left: 265px;
   margin-bottom: 20px;
+  background: url(panier.png) left bottom no-repeat;
 
   table {
 
@@ -73,6 +89,11 @@ section#content {
   }
 }
 
+audio {
+  background-color: $brown;
+  width: 475px;
+}
+
 #horaire, #anniversaire {
   float: left;
   width: 240px;
@@ -84,6 +105,13 @@ section#content {
   clear: left;
 }
 
+#menu {
+
+  img {
+    padding-top: 5px;
+  }
+}
+
 .plats_list {
   float: left;
   width: 234px;
@@ -93,6 +121,12 @@ section#content {
 .plats_list_2 {
   float: left;
   width: 200px;
+}
+
+.big_plats_list {
+  float: left;
+  width: 500px;
+  clear: left;
 }
 
 #journaux {
@@ -111,7 +145,7 @@ section#content {
 
 .image_sidebar  {
   margin-top: 20px;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 .batimment_2 {
@@ -132,6 +166,10 @@ section#content {
 
 .repas_2, .repas_3, .piece_2, .batimment_4 {
   margin-top: 10px;
+}
+
+.plats_16 {
+  padding-right: 26px;
 }
 
 .center {
@@ -169,13 +207,12 @@ form {
 }
 
 header {
-  width: 975px;
+  width: 979px;
   margin: 0 auto;
   height: 265px;
 
   h1 {
-    position: absolute;
-    left: 161px;
+    margin-left: -194px;
     @include replace-text-with-dimensions('logo.png', 50%, 50%, true);
   }
 
@@ -254,10 +291,10 @@ header {
   width: 50%;
 }
 
-section#sidebar {
+#sidebar {
   float: right;
-  width: 175px;
-  margin-right: 163px;
+  width: 171px;
+  margin-right: 18px;
 
   p {
     font-size: 0.9em;
