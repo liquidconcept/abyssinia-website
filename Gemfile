@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 
 gem 'rack'
 gem 'pony'
+gem 'sinatra'
 
 group :nanoc do
   gem 'nanoc', '3.6.3'
@@ -18,14 +19,6 @@ group :nanoc do
   gem "sinatra"
 end
 
-group :development do
-  gem 'capistrano'
-  gem 'railsless-deploy'
-end
-
-group :development, :test do
-end
-
 group :guard do
   gem 'rb-fsevent'
   gem 'guard'
@@ -33,4 +26,12 @@ group :guard do
   gem 'guard-livereload'
   gem 'guard-nanoc'
   gem 'ruby_gntp'
+end
+
+group :development do
+  gem 'capistrano'
+  gem 'railsless-deploy'
+end
+
+group :development, :test do
 end

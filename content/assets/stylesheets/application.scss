@@ -32,6 +32,7 @@ p {
 }
 
 hr {
+  margin: 20px 0 20px 90px;
   border-top: 1px solid $brown;
   border-bottom: 0px solid transparent;
   width: 60%;
@@ -105,6 +106,13 @@ audio {
   clear: left;
 }
 
+.plats_list_height {
+  float: left;
+  width: 355px;
+  clear: left;
+  height: 130px;
+}
+
 #menu {
 
   img {
@@ -114,7 +122,7 @@ audio {
 
 .plats_list {
   float: left;
-  width: 234px;
+  width: 340px;
   clear: left;
 }
 
@@ -160,7 +168,7 @@ audio {
   margin-left: 20%;
 }
 
-.map, .maryam, .kifto {
+.map, .maryam, .kifto, .anniversaire {
   margin-left: 8%;
 }
 
@@ -269,9 +277,9 @@ header {
 
 #cafe {
 
-
   p {
     text-align: center;
+    margin-right: 90px;
   }
 }
 
@@ -294,7 +302,7 @@ header {
 #sidebar {
   float: right;
   width: 171px;
-  margin-right: 10px;
+  margin-right: 15px;
 
   p {
     font-size: 0.9em;
