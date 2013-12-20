@@ -4,6 +4,8 @@ source 'http://rubygems.org'
 gem 'rack'
 gem 'pony'
 gem 'sinatra'
+gem 'activerecord'
+gem 'sinatra-activerecord'
 
 group :nanoc do
   gem 'nanoc', '3.6.3'

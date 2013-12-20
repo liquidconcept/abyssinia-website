@@ -1,6 +1,24 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (4.0.2)
+      activesupport (= 4.0.2)
+      builder (~> 3.1.0)
+    activerecord (4.0.2)
+      activemodel (= 4.0.2)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.2)
+      arel (~> 4.0.0)
+    activerecord-deprecated_finders (1.0.3)
+    activesupport (4.0.2)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    arel (4.0.1)
+    atomic (1.1.14)
+    builder (3.1.4)
     capistrano (3.0.1)
       i18n
       rake (>= 10.0.0)
@@ -55,6 +73,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25)
+    minitest (4.7.5)
     multi_json (1.8.2)
     nanoc (3.6.3)
       cri (~> 2.3)
@@ -88,6 +107,9 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    sinatra-activerecord (1.2.3)
+      activerecord (>= 3.0)
+      sinatra (~> 1.0)
     slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -109,12 +131,15 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
+    thread_safe (0.1.3)
+      atomic
     tilt (1.4.1)
     timers (1.1.0)
     tins (0.12.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    tzinfo (0.3.38)
     uglifier (2.3.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -123,6 +148,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   capistrano
   compass
   guard
@@ -139,6 +165,7 @@ DEPENDENCIES
   ruby_gntp
   sass
   sinatra
+  sinatra-activerecord
   sprockets
   sprockets-helpers
   sprockets-sass

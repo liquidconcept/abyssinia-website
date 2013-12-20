@@ -1,8 +1,18 @@
 # encoding: utf-8
-require 'sinatra/base'
 require 'pony'
+require 'sinatra'
+require 'sinatra/base'
+require 'sinatra/activerecord'
 
 require File.expand_path('../../config/application', __FILE__)
+require File.expand_path('../../config/nanoc', __FILE__)
+require File.expand_path('../../config/compass', __FILE__)
+
+include Nanoc::Helpers::Sprockets
+
+configure do
+  @@config = YAML.load_file(File.expand_path('../../config/settings.yml', __FILE__)) rescue {}
+end
 
 module Application
   class Website < Sinatra::Base
@@ -22,6 +32,28 @@ module Application
       )
 
       redirect "/contact.html"
+    end
+  end
+
+  class Admin < Sinatra::Base
+    use Rack::MethodOverride
+
+    use Rack::Auth::Basic, "Protected Area" do |username, password|
+      username == @@config['basic_auth']['username'] && password == @@config['basic_auth']['password']
+    end
+
+    get '/' do
+      @news = New.all
+
+      erb :"admin/index"
+    end
+
+    put '/publish' do
+
+      system 'rm public/index.html'
+      system 'bundle exec nanoc compile'
+
+      redirect '/admin'
     end
   end
 end

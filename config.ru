@@ -8,3 +8,7 @@ require 'app/website'
 
 run Application::Website.new
 
+run Rack::URLMap.new({
+  "/" => Application::Website,
+  "/admin" => Application::Admin
+})

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Abyssinia - Administration</title>
+    <link rel="stylesheet" href="<%= stylesheet_path 'application' %>" media="screen">
+    <script src="<%= javascript_path 'application' %>"></script>
+  </head>
+  <body>
+    <div id="main">
+      <header>
+
+      </header>
+      <form action="/admin/publish" method="post">
+        <div style="margin:0;padding:0">
+          <input name="_method" type="hidden" value="put" />
+        </div>
+        <textarea name="news"></textarea>
+        <input type="submit" value="Publier" class="btn btn-warning publish" />
+      </form>
+    </div>
+  </body>
+</html>
