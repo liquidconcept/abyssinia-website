@@ -68,7 +68,7 @@ hr {
   background: url(background.jpg) 38px 0px repeat-y;
 }
 
-#content {
+#content_div {
   width: 495px;
   margin-left: 2px;
   padding-left: 265px;
@@ -320,5 +320,14 @@ footer {
 
   p {
     margin: 2px 0px 0px 0px;
+  }
+}
+
+/******************************* ADMIN **********************************/
+div.admin {
+  padding-top: 20px;
+
+  #content_div {
+    background: none;
   }
 }
