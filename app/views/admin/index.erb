@@ -14,6 +14,15 @@
           <textarea name="news"></textarea>
           <input type="submit" value="Publier" class="btn btn-warning publish" />
         </form>
+        <div id="email_list">
+          <form action="/admin/delete" method="delete">
+            <input type="submit" value="Delete" /><input name="email_request[email]" value="" />
+          </form>
+          <form action="/admin/emails.csv" method="get">
+            <input type="submit" value="Export to CSV" />
+          </form>
+        </div>
+        <%= @status_report %>
       </div>
     </div>
   </body>

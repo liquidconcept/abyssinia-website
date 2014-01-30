@@ -2,10 +2,12 @@
 source 'http://rubygems.org'
 
 gem 'rack'
+gem 'rake'
 gem 'pony'
 gem 'sinatra'
 gem 'activerecord'
 gem 'sinatra-activerecord'
+gem 'sqlite3'
 
 group :nanoc do
   gem 'nanoc', '3.6.3'
@@ -31,6 +33,7 @@ group :guard do
 end
 
 group :development do
+  gem 'tux'
   gem 'capistrano'
   gem 'railsless-deploy'
 end
