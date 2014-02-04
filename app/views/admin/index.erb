@@ -7,11 +7,8 @@
   <body>
     <div id="main" class="admin">
       <div id="content_div">
-        <form action="/admin/publish" method="post">
-          <div style="margin:0;padding:0">
-            <input name="_method" type="hidden" value="put" />
-          </div>
-          <textarea name="news"></textarea>
+        <form action="/admin/news" method="post">
+          <textarea name="news_request[news_text]" value=""></textarea>
           <input type="submit" value="Publier" class="btn btn-warning publish" />
         </form>
         <div id="email_list">

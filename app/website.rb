@@ -5,6 +5,7 @@ require 'csv'
 require 'sinatra/base'
 require 'sinatra/activerecord'
 require './app/models/email'
+require './app/models/news_text'
 
 require File.expand_path('../../config/application', __FILE__)
 require File.expand_path('../../config/nanoc', __FILE__)
@@ -52,13 +53,19 @@ module Application
 
     get '/' do
       @emails = Email.order(email: :desc)
+      @news_texts = News_text.all
 
       erb :"admin/index"
     end
 
-    put '/news' do
+    post '/news' do
+      news_text = params[:news_request][:news_text]
 
+      News_text.create!(news_text: news_text)
+
+      #generate
       system 'rm public/index.html'
+      system 'touch tmp/restart.txt'
       system 'bundle exec nanoc compile'
 
       redirect '/admin'
@@ -78,12 +85,11 @@ module Application
       email = params[:email_request][:email]
 
       if Email.where(email: email).exists?
-        @status_report = "<p>un email a été supprimer de la liste</p>"
+        @status_report = "l'email #{email} a été supprimer de la liste"
+        Email.where(email: email).destroy_all
       else
-        @status_report = "<p>l'email n'existe pas</p>"
+        @status_report = "l'email #{email} n'existe pas"
       end
-
-      Email.where(email: email).destroy_all
 
       erb :"admin/index"
     end
