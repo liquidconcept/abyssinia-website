@@ -60,7 +60,7 @@ module Application
 
     get '/compile' do
       system 'rm public/index.html'
-      system 'bundle exec nanoc compile &> nanoc_failed.txt'
+      system 'bundle exec nanoc compile'
 
       redirect "/admin"
     end

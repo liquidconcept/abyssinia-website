@@ -10,7 +10,7 @@
         <form action="/admin/news/" method="post">
           <textarea name="news_request[newsText]" value=""><%= @news_text.present? ? @news_text.news_text : '' %></textarea>
           <br /><input type="submit" value="Sauvegarder" />
-          <a class="compile" href="/admin/compile"><input value="publier" type="submit"></a>
+          <a class="compile" href="/admin/compile"><input value="publier" type="button" class="publish"></a>
         </form>
         <%= @status_news %>
         <div id="email_list">
