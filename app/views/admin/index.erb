@@ -7,10 +7,12 @@
   <body>
     <div id="main" class="admin">
       <div id="content_div">
-        <form action="/admin/news" method="post">
-          <textarea name="news_request[news_text]" value=""></textarea>
-          <input type="submit" value="Publier" class="btn btn-warning publish" />
+        <form action="/admin/news/" method="post">
+          <textarea name="news_request[newsText]" value=""><%= @news_text.present? ? @news_text.news_text : '' %></textarea>
+          <input type="submit" value="Sauvegarder" />
+          <a href="/admin/compile">publier</a>
         </form>
+        <%= @status_news %>
         <div id="email_list">
           <form action="/admin/delete" method="delete">
             <input type="submit" value="Delete" /><input name="email_request[email]" value="" />
@@ -19,7 +21,7 @@
             <input type="submit" value="Export to CSV" />
           </form>
         </div>
-        <%= @status_report %>
+        <%= @status_email %>
       </div>
     </div>
   </body>

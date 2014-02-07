@@ -20,6 +20,15 @@
   <img class="image_right image_sidebar" src="<%= asset_path "cafe_2.jpg" %>"></img>
 <% end %>
 
+<% if Application::NewsText.first.present? && Application::NewsText.first.news_text.present? %>
+  <div class='news'>
+    <div class='content'>
+      <h2 class='title'>News</h2>
+      <p><%= Application::NewsText.first.news_text %></p>
+    </div>
+  </div>
+<% end %>
+
 <div class="warning">
   <p>Réservations au 021 311 49 07 ou au 078 860 74 73. Par e-mail ou <a href="/contact.html">formulaire de contact</a> : <a href="mailto:info@abyssinia.ch">info@abyssinia.ch</a></p>
 </div>

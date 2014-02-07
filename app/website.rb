@@ -53,20 +53,24 @@ module Application
 
     get '/' do
       @emails = Email.order(email: :desc)
-      @news_texts = News_text.all
+      @news_text = NewsText.first
 
       erb :"admin/index"
     end
 
-    post '/news' do
-      news_text = params[:news_request][:news_text]
-
-      News_text.create!(news_text: news_text)
-
-      #generate
+    get '/compile' do
       system 'rm public/index.html'
-      system 'touch tmp/restart.txt'
-      system 'bundle exec nanoc compile'
+      system 'bundle exec nanoc compile &> nanoc_failed.txt'
+
+      redirect "/admin"
+    end
+
+    post '/news/' do
+      newsText = params[:news_request][:newsText]
+      NewsText.destroy_all
+      @news_text = NewsText.create!(news_text: newsText)
+
+      @status_news = "la news a été changée"
 
       redirect '/admin'
     end
@@ -85,13 +89,13 @@ module Application
       email = params[:email_request][:email]
 
       if Email.where(email: email).exists?
-        @status_report = "l'email #{email} a été supprimer de la liste"
+        @status_email = "l'email #{email} a été supprimer de la liste"
         Email.where(email: email).destroy_all
       else
-        @status_report = "l'email #{email} n'existe pas"
+        @status_email = "l'email #{email} n'existe pas"
       end
 
-      erb :"admin/index"
+      redirect '/admin'
     end
   end
 end
